@@ -7,45 +7,37 @@
 	<dataSet xsi:type="DataSetQuery">
 		<name>НаборДанных1</name>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>ОтработаноЧасов</dataPath>
-			<field>ОтработаноЧасов</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Отработано часов</v8:content>
-				</v8:item>
-			</title>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>СуммаКОплате</dataPath>
-			<field>СуммаКОплате</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Сумма к оплате</v8:content>
-				</v8:item>
-			</title>
-		</field>
-		<field xsi:type="DataSetFieldField">
 			<dataPath>Сотрудник</dataPath>
 			<field>Сотрудник</field>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЧасовКОплатеРасход</dataPath>
+			<field>ЧасовКОплатеРасход</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Часов к оплате Расход</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаКОплатеРасход</dataPath>
+			<field>СуммаКОплатеРасход</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма к оплате Расход</v8:content>
+				</v8:item>
+			</title>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
-	ВКМ_ВыполненныеСотрудникомРаботыОстаткиИОбороты.Сотрудник КАК Сотрудник,
-	-ВКМ_ВыполненныеСотрудникомРаботыОстаткиИОбороты.ЧасовКОплатеОборот КАК ОтработаноЧасов,
-	-ВКМ_ВыполненныеСотрудникомРаботыОстаткиИОбороты.СуммаКОплатеОборот КАК СуммаКОплате
+	ВКМ_ВыполненныеСотрудникомРаботыОбороты.Сотрудник,
+	ВКМ_ВыполненныеСотрудникомРаботыОбороты.ЧасовКОплатеРасход,
+	ВКМ_ВыполненныеСотрудникомРаботыОбороты.СуммаКОплатеРасход
 ИЗ
-	РегистрНакопления.ВКМ_ВыполненныеСотрудникомРаботы.ОстаткиИОбороты(&amp;НачалоПериода, &amp;КонецПериода, , ,) КАК ВКМ_ВыполненныеСотрудникомРаботыОстаткиИОбороты</query>
+	РегистрНакопления.ВКМ_ВыполненныеСотрудникомРаботы.Обороты КАК ВКМ_ВыполненныеСотрудникомРаботыОбороты</query>
 	</dataSet>
-	<totalField>
-		<dataPath>ОтработаноЧасов</dataPath>
-		<expression>Сумма(ОтработаноЧасов)</expression>
-	</totalField>
-	<totalField>
-		<dataPath>СуммаКОплате</dataPath>
-		<expression>Сумма(СуммаКОплате)</expression>
-	</totalField>
 	<parameter>
 		<name>НачалоПериода</name>
 		<title xsi:type="v8:LocalStringType">
