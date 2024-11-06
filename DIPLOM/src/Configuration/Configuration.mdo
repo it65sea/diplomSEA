@@ -1103,6 +1103,7 @@
   <commonForms>CommonForm.ФормаВариантаОтчета</commonForms>
   <commonForms>CommonForm.ФормаНастроекОтчета</commonForms>
   <commonForms>CommonForm.ФормаОтчета</commonForms>
+  <commonForms>CommonForm.ВКМ_Календарь</commonForms>
   <catalogs>Catalog.ВариантыОтчетов</catalogs>
   <catalogs>Catalog.ВерсииРасширений</catalogs>
   <catalogs>Catalog.ВерсииФайлов</catalogs>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonForm xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6d9b6bba-4686-4198-9155-153171125081">
+  <name>ВКМ_Календарь</name>
+  <synonym>
+    <key>ru</key>
+    <value>ВКМ календарь</value>
+  </synonym>
+  <usePurposes>PersonalComputer</usePurposes>
+  <usePurposes>MobileDevice</usePurposes>
+</mdclass:CommonForm>
